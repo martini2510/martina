@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вибір кольору, групи та кількості</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Змінено шрифт на більш естетичний */
+            background-color: #f4f4f4; /* Світло-сірий фон */
+            margin: 0; /* Видаляємо зовнішні відступи */
+            padding: 0; /* Видаляємо внутрішні відступи */
+        }
+        .container {
+            width: 80%; /* Ширина контейнера */
+            margin: 0 auto; /* Центруємо контейнер на сторінці */
+            padding-top: 50px; /* Відступ зверху */
+        }
+        h2 {
+            text-align: center; /* Вирівнюємо заголовок по центру */
+            color: #000000; /* Світло-фіолетовий колір тексту заголовку */
+        }
+
+        h3{
+            font-size:15px;
+            font-weight: normal;
+        }
+
+
+        form {
+            background-color: #fff; /* Колір фону форми */
+            padding: 20px; /* Відступ всередині форми */
+            border-radius: 8px; /* Закруглені кути форми */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тінь форми */
+        }
+        select, input[type="number"] {
+            width: 100%; /* Зменшує ширину вибірки та поля вводу */
+            padding: 10px;
+            margin: 10px auto; /* Вирівнює елементи по центру */
+            display: block; /* Робить елементи блочними */
+            border: 1px solid #a26ac7; /* Світло-фіолетова рамка для вибірки і вводу */
+            border-radius: 5px;
+            background-color: #f8f8f8; /* Світло-сірий фон для вибірки і вводу */
+        }
+        input[type="submit"] {
+            background-color: #a26ac7; /* Світло-фіолетовий колір фону кнопки */
+            color: white; /* Білий колір тексту кнопки */
+            border: none; /* Видаляємо границю кнопки */
+            cursor: pointer; /* Зміна курсору при наведенні на кнопку */
+            padding: 10px 20px; /* Відступи */
+            border-radius: 5px; /* Закруглені кути */
+            display: block; /* Робить кнопку блочним елементом */
+            margin: 20px auto; /* Центрує кнопку */
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #58a0cf; /* Зміна коліру фону кнопки при наведенні */
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Оберіть замовлення</h2>
+        <form>
+            <label for="group">Вид нарцисів:</label>
+            <select id="group" name="group">
+                <option value="A">Махрові нарциси</option>
+                <option value="B">Мініатюрні нарциси</option>
+                <option value="C">Трубчасті нарциси</option>
+                <option value="D">Жонкіллієві нарциси</option>
+                
+            </select>
+            <label for="color">Колір:</label>
+            <select id="color" name="color">
+                <option value="red">Червоний</option>
+                <option value="pink">Рожевий</option>
+                <option value="white">Білий</option>
+                <option value="black">Чорний</option>
+                <option value="blue">Блакитний</option>
+            </select>
+            
+            
+           
+            <div class="calculator">
+                <h3>Оберіть кількість</h3>
+                
+                <input type="number" id="numberInput" min="0" max="10000">
+
+                <button onclick="calculate(event)">Дізнатись ціну</button>
+
+                <p id="result"></p>
+            </div>
+            
+            <script>
+                function calculate(event) {
+                    // Зупиняємо стандартну подію відправлення форми
+                    event.preventDefault();
+            
+                    var numberInput = document.getElementById('numberInput').value;
+                    var result = numberInput * 40;
+                    document.getElementById('result').innerText = "Дякуємо за замовлення, до сплати: " + result;
+                }
+            </script>
+            
+            <input type="submit" value="Замовити">
+        </form>
+        <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/flover.html" target="_blank" class="button">Дякуємо за замовленя! натисніть сюди щоб повернутися на головну</a>
+    </div>
+</body>
+</html>

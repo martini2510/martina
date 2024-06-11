@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="submit"] {
+            width: calc(100% - 24px);
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #967e92;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #a26ac7;
+        }
+        input[type="submit"] {
+            background-color: #a26ac7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #58a0cf;
+        }
+        .button {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        .button:hover {
+            color: #a26ac7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Форма реєстрації</h2>
+        <form action="process_registration.php" method="POST">
+            <input type="text" id="username" name="username" placeholder="Ім'я користувача"><br>
+            <input type="email" id="email" name="email" placeholder="Електронна пошта"><br>
+            <input type="password" id="password" name="password" placeholder="Пароль"><br>
+            <input type="submit" value="Зареєструватися">
+        </form>
+        <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/flover.html" class="button">Дякуємо за реєстрацію, натисніть сюди щоб повернутися на головну</a>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html> 
+<html lang="uk"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Крамничка квітів - Головна</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-size: cover; 
+            background-position: center; 
+            color: #333; 
+            
+        }
+        
+        header { 
+            font-size: 50px;
+            background-image: linear-gradient( #d567e4, #faf6f3); /* градієнтний фон */
+            text-align : center; 
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+            padding: 10px; /* збільшуємо відступ для зручності */
+            font-family: 'Brush Script MT', cursive;
+            margin: 0;
+        } 
+        h1{ 
+            margin: 0; 
+            font-size: 30px;
+            text-align : center; 
+            font-family: 'Brush Script MT', cursive;
+        } 
+        h2{
+            
+            text-align : center;
+            width: 100%; 
+            
+        }
+        h3{
+            font-size: 15px;
+            text-align : center;
+            margin: -50px 0 0;
+           
+             
+        }
+        nav { 
+            text-align: center; 
+            margin-top: 10px; 
+        } 
+        nav a { 
+            text-decoration: none; 
+            color: #666; 
+            margin: 0 10px;
+            font-size: 15px; 
+        } 
+        main { 
+            padding: 20px; 
+        } 
+        .flower { 
+            background-image: linear-gradient(bottom, rgb(228, 162, 221), rgb(243, 243, 243));
+            padding: 20px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            border-radius: 8px; 
+        } 
+        .flower img { 
+            max-width: 90%; 
+            height: auto; 
+            border-radius: 10px; /* заокруглюємо кути зображення */
+        } 
+        .flower h2 { 
+            margin-top: 0; 
+        } 
+        .flower p { 
+            margin-bottom: 0; 
+        } 
+        .container {
+            display: grid; /* Встановлюємо контейнер як сітку */
+            grid-template-columns: repeat(auto-fill, minmax(22%, 1fr)); /* Автоматично розміщуємо блоки в рядку */
+            grid-gap: 2%; /* Додаємо невеликий відступ між блоками */
+            width: 95%; /* Ширина контейнера */
+            margin: 0 auto; /* Центруємо контейнер */
+            padding-top: 16px; /* Відступ зверху */
+        }
+
+        .column {
+            padding: 10px;
+            height: auto;
+            border-radius: 20px; /* Заокруглені кути рамки */
+            background-color: #f0f0f0; /* Фон рамки */
+        }
+
+        h4{
+            font-size: 15px;
+            text-align : center;
+            color: #ffffff;
+
+        }
+        .container {
+            width: 100%;
+        }
+
+        .im {
+            width: 100%;
+            height: auto;
+        }
+        /* Стилі для посилань */
+        a.button {
+            background-color: #cbabe0;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            border-radius: 5px; /* заокруглені кути кнопки */
+            text-decoration: none;
+            transition: background-color 0.3s ease; /* плавне змінення кольору при наведенні */
+            font-size:5px;
+        }
+        a.button:hover {
+            background-color: #9262aa; /* зміна кольору при наведенні */
+        }
+        a:link{
+          color:#a26ac7;
+            font-size:20px;
+          }
+
+          a:visited{
+            color:#000000;
+          }
+
+          a:hover{
+            color:#a26ac7;
+          }
+
+          a:active{
+            color:#a39c9c;
+            font-size:10px;
+          }
+          html {
+            scroll-behavior: smooth;
+        }
+
+        
+        #about-us:target {
+            background-color: lightblue;
+            transition: background-color 1s ease;
+        }
+        
+        footer {
+            background-color: #dfd3e9a6; 
+            padding: 20px; 
+            text-align: center;
+            color: #000000; 
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); 
+        }
+        h5{
+            font-size:25px; 
+        }
+        h6{
+            font-size:15px;
+        }
+        
+        nav a {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-underline {
+            position: absolute;
+            bottom: -17px; /* Підсуваємо полоску на 3px вниз відносно нижнього краю батьківського елемента <a> */
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #a26ac7; /* Колір полоски */
+            transition: width 0.3s ease; /* Плавна анімація розширення полоски */
+        }
+
+        nav a:hover .nav-underline {
+            width: 100%; /* Розширюємо полоску до повної ширини батьківського елемента <a> при наведенні мишки */
+        }
+
+
+
+          
+
+    </style> 
+
+</head> 
+<body> 
+    <header> 
+        
+        <p><font face="cursive">Крамничка квітів</font></p><br>
+        <h3>❤️ Вирощюємо квіти з любовю ❤️</h3>
+        
+        <nav> 
+            <nav> 
+                <a href="#about-us">Про нас<span class="nav-underline"></span></a>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/reestracia.html">Реєстрація<span class="nav-underline"></span></a>
+            </nav>
+            
+        </nav>
+    </header> 
+    <main> 
+       
+        <h1>Троянди</h1>
+        <div class="container">
+            
+            
+            <div class="column">
+                <img class="im" src="https://www.u-f-l.net/bouquet/101_krasnaya_roza_50_sm-8259_dbb_o.jpg">
+                <p><b>Троянди звичайні</b></p>
+                <p>Ціна: 35 грн/шт</p>
+                <p>В наявності 10000/шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    
+                    
+                </ul>
+                
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovlenya.html" target="_blank" class="button">Замовити</a>
+            </div>
+            
+            <div class="column">
+                <img class="im" src="https://flority.com.ua/edit/uploads/page/1316/.thumb_614a3564e9764.jpg">
+                <p><b>Піоновидні троянди</b></p>
+                <p>Ціна: 35 грн/шт</p>
+                <p>В наявності-10000 шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovlenya.html" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://www.tsvitsad.com.ua/upload/catalog/gallery/62caa8ef48e42.jpg">
+                <p><b>Японські троянди</b></p>
+                <p>Ціна: 35 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                   
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovlenya.html" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://botanicmarket.com.ua/content/images/32/480x480l50nn0/troyanda-parkova-augusta-luise-48041884279503.jpg">
+                <p><b>Троянда Августа Луїза</b></p>
+                <p>Ціна: 35 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                   
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovlenya.html" target="_blank" class="button">Замовити</a>
+                
+            </div>
+            <div class="column">
+                <img class="im" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlWw1mkMzqvU0S1OlHinA89FsOhj5hB3dsXQ&s">
+                <p><b>Роза Глорія Дей</b></p>
+                <p>Ціна: 35 грн/шт</p>
+                <p>В наявності 10000/шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                   
+                </ul>
+                
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovlenya.html" target="_blank" class="button">Замовити</a>
+            </div>
+            
+            <div class="column">
+                <img class="im" src="https://floraug.com.ua/components/com_jshopping/files/img_products/full_foto-roza-frederik-mistral-01.jpg">
+                <p><b>Роза Фредерік Містраль</b></p>
+                <p>Ціна: 35 грн/шт</p>
+                <p>В наявності-10000 шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovlenya.html" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcQO-TuPnXxlYX-VipQaGnCtMdZ8U8Mk5E-Q&s">
+                <p><b>Роза Мона Ліза</b></p>
+                <p>Ціна: 35 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovlenya.html" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm251Do3qwcqU8Bck0859wI0bmXbG44f5b5A&s">
+                <p><b>Роза Марія Генрієтта</b></p>
+                <p>Ціна: 35 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovlenya.html" target="_blank" class="button">Замовити</a>
+                
+            </div>
+
+        </div>
+        <h4>///////////////////////////////////////////////////////////////</h4>
+        <h2><a href="https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D0%BE%D1%8F%D0%BD%D0%B4%D0%B0" target="_blank" class="button">Дізнайтеся більше про троянди</a></h2>
+        
+        <h1>Лілії</h1>
+        <div class="container">
+            
+            
+            <div class="column">
+                <img class="im" src="https://yaskravaklumba.com.ua/image/cache/catalog/kategory/klubniilukovicy/lilii/martagon/p333_roze_lichtroze_creme_wit_rood_spikkel_a_0004-480x480.jpg">
+                <p><b>Лілія лісова</b></p>
+                <p>Ціна: 45 грн/шт</p>
+                <p>В наявності: 10000/шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    <li>чорні</li>
+                    <li>блакитні</li>
+                </ul>
+                
+                <a href="http://127.0.0.1:5500/zamov2222lili.html?group=A&color=red" target="_blank" class="button">Замовити</a>
+            </div>
+            
+            <div class="column">
+                <img class="im" src="https://agrarii-razom.com.ua/sites/default/files/byr/lilii-giganti_0.jpg">
+                <p><b>Лілії гіганти</b></p>
+                <p>Ціна: 45 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    <li>чорні</li>
+                    <li>блакитні</li>
+                </ul>
+                <a href="http://127.0.0.1:5500/zamov2222lili.html?group=A&color=red" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://sadubykovunu.com.ua/image/cache/catalog/image/cache/catalog/202312-600x600.webp">
+                <p><b>Лілія королівська</b></p>
+                <p>Ціна: 45 грн/шт</p>
+                <p>В наявності-10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    <li>чорні</li>
+                    <li>блакитні</li>
+                </ul>
+                <a href="http://127.0.0.1:5500/zamov2222lili.html?group=A&color=red" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://i.pinimg.com/236x/4a/48/e9/4a48e99b85589e58da182a6e8fef27da.jpg">
+                <p><b>Павуча лілія</b></p>
+                <p>Ціна: 45 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    <li>чорні</li>
+                    <li>блакитні</li>
+                </ul>
+                <a href="http://127.0.0.1:5500/zamov2222lili.html?group=A&color=red" target="_blank" class="button">Замовити</a>
+            </div>
+        </div>
+        <h2><a href="https://uk.wikipedia.org/wiki/%D0%9B%D1%96%D0%BB%D1%96%D1%8F" target="_blank" class="button">Дізнайтеся більше про лілії</a></h2>
+        <h1>Фіалки</h1>
+        <div class="container">
+        <div class="column">
+            <img class="im" src="https://www.violet.kiev.ua/assets/images/plants/violet/2023/brass_band_m.JPG">
+            <p><b>Каймісті фіалки</b></p>
+            <p>Ціна: 40 грн/шт</p>
+            <p>В наявності: 10000/шт</p>
+            <p>Кольори в наявнсті:</p>
+            <ul>
+                <li>червоні</li>
+                <li>рожеві</li>
+                <li>білі</li>
+                <li>чорні</li>
+                <li>блакитні</li>
+            </ul>
+            
+            <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/zamovleniafialkii.html" target="_blank" class="button">Замовити</a>
+        </div>
+        
+        <div class="column">
+            <img class="im" src="https://florium.ua/media/catalog/product/cache/1/small_image/300x300/925f46717e92fbc24a8e2d03b22927e1/s/a/saintpaulia-idaho.jpg">
+            <p><b>Фантазійнісенполій</b></p>
+            <p>Ціна: 40 грн/шт</p>
+            <p>В наявності: 10000 шт</p>
+            <p>Кольори в наявнсті:</p>
+            <ul>
+                <li>червоні</li>
+                <li>рожеві</li>
+                <li>білі</li>
+                <li>чорні</li>
+                <li>блакитні</li>
+            </ul>
+            <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/zamovleniafialkii.html" target="_blank" class="button">Замовити</a>
+        </div>
+        <div class="column">
+            <img class="im" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYnnv8oADXYmSGdjjNp9o7bgBSSEp00BYXdA&s">
+            <p><b>Сенполії-химери</b></p>
+            <p>Ціна: 40 грн/шт</p>
+            <p>В наявності-10000 шт</p>
+            <p>Кольори в наявності:</p>
+            <ul>
+                <li>червоні</li>
+                <li>рожеві</li>
+                <li>білі</li>
+                <li>чорні</li>
+                <li>блакитні</li>
+            </ul>
+            <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/zamovleniafialkii.html" target="_blank" class="button">Замовити</a>
+        </div>
+        <div class="column">
+            <img class="im" src="https://store.yarylo.ua/Media/shop-10124/%D0%9A%D1%96%D0%BC%D0%BD%D0%B0%D1%82%D0%BD%D1%96%20%D1%80%D0%BE%D1%81%D0%BB%D0%B8%D0%BD%D0%B8/%D0%9A%D0%B2%D1%96%D1%82%D1%83%D1%87%D1%96/%D0%A4%D1%96%D0%B0%D0%BB%D0%BA%D0%B0/%D0%A4%D1%96%D0%B0%D0%BB%D0%BA%D0%B0.jpg">
+            <p><b>Класичний тип фіалки</b></p>
+            <p>Ціна: 40 грн/шт</p>
+            <p>В наявності: 10000 шт</p>
+            <p>Кольори в наявності:</p>
+            <ul>
+                <li>червоні</li>
+                <li>рожеві</li>
+                <li>білі</li>
+                <li>чорні</li>
+                <li>блакитні</li>
+            </ul>
+            <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/zamovleniafialkii.html" target="_blank" class="button">Замовити</a>
+        </div>
+    </div>
+    <h2><a href="https://uk.wikipedia.org/wiki/%D0%A4%D1%96%D0%B0%D0%BB%D0%BA%D0%B0" target="_blank" class="button">Дізнайтеся більше про фіалки</a></h2>
+    <h1>Гортензії</h1>
+    <div class="container">
+    <div class="column">
+        <img class="im" src="https://posadka.com.ua/upload/resize_cache/iblock/775/455_455_131903e01863149be97e251a4ed38558f/775d91cb0d56ee9382a41d53cf7efaa0.jpg">
+        <p><b>гортензія деревоподібна</b></p>
+        <p>Ціна: 50 грн/шт</p>
+        <p>В наявності: 10000/шт</p>
+        <p>Кольори в наявнсті:</p>
+        <ul>
+            <li>червоні</li>
+            <li>рожеві</li>
+            <li>білі</li>
+            <li>чорні</li>
+            <li>блакитні</li>
+        </ul>
+        
+        <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovgortenzii.html" target="_blank" class="button">Замовити</a>
+    </div>
+    
+    <div class="column">
+        <img class="im" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJucSVtbzrA3xBG4Nk1jMKIM46przWRHgyWQ&s">
+        <p><b>Гортензія відхилена</b></p>
+        <p>Ціна: 50 грн/шт</p>
+        <p>В наявності: 10000 шт</p>
+        <p>Кольори в наявнсті:</p>
+        <ul>
+            <li>червоні</li>
+            <li>рожеві</li>
+            <li>білі</li>
+            <li>чорні</li>
+            <li>блакитні</li>
+        </ul>
+        <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovgortenzii.html" target="_blank" class="button">Замовити</a>
+    </div>
+    <div class="column">
+        <img class="im" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo36iy0Y0FHFHS-V6Poh-YcU2uaOcSj4jLPQ&s">
+        <p><b>Гортензія шорстка</b></p>
+        <p>Ціна: 50 грн/шт</p>
+        <p>В наявності-10000 шт</p>
+        <p>Кольори в наявності:</p>
+        <ul>
+            <li>червоні</li>
+            <li>рожеві</li>
+            <li>білі</li>
+            <li>чорні</li>
+            <li>блакитні</li>
+        </ul>
+        <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovgortenzii.html" target="_blank" class="button">Замовити</a>
+    </div>
+    <div class="column">
+        <img class="im" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfOA_zdCfV7lscOT7I6VKFfByiGBLbWYApWQ&s">
+        <p><b>Гортензія пепельна</b></p>
+        <p>Ціна: 50 грн/шт</p>
+        <p>В наявності: 10000 шт</p>
+        <p>Кольори в наявності:</p>
+        <ul>
+            <li>червоні</li>
+            <li>рожеві</li>
+            <li>білі</li>
+            <li>чорні</li>
+            <li>блакитні</li>
+        </ul>
+        <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovgortenzii.html" target="_blank" class="button">Замовити</a>
+    </div>
+</div>
+<h2><a href="https://uk.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%82%D0%B5%D0%BD%D0%B7%D1%96%D1%8F" target="_blank" class="button">Дізнайтеся більше про гортензії</a></h2>
+
+        <h1>Нарциси</h1>
+            <div class="container">
+            <div class="column">
+                <img class="im" src="https://yaskravaklumba.com.ua/image/cache/catalog/osen/narcissus/easter-born-2-480x480.jpg">
+                <p><b>Махрові нарциси</b></p>
+                <p>Ціна: 40 грн/шт</p>
+                <p>В наявності: 10000/шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    <li>чорні</li>
+                    <li>блакитні</li>
+                </ul>
+                
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovnarcisi.html" target="_blank" class="button">Замовити</a>
+            </div>
+            
+            <div class="column">
+                <img class="im" src="https://yaskravaklumba.com.ua/image/cache/catalog/osen/narcissus/miniaturnye/martinette12-500x500.jpg">
+                <p><b>Мініатюрні нарциси</b></p>
+                <p>Ціна: 40 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    <li>чорні</li>
+                    <li>блакитні</li>
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovnarcisi.html" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://florium.ua/media/catalog/product/cache/1/file/9df78eab33525d08d6e5fb8d27136e95/n/a/narcissus-w-p-milner_2.jpg">
+                <p><b>Трубчасті нарциси</b></p>
+                <p>Ціна: 40 грн/шт</p>
+                <p>В наявності-10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    <li>чорні</li>
+                    <li>блакитні</li>
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovnarcisi.html" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://florium.ua/media/catalog/product/cache/1/file/380x380/17f82f742ffe127f42dca9de82fb58b1/p/u/pueblo.jpg">
+                <p><b>Жонкіллієві нарциси</b></p>
+                <p>Ціна: 40 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    <li>червоні</li>
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    <li>чорні</li>
+                    <li>блакитні</li>
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/zamovnarcisi.html" target="_blank" class="button">Замовити</a>
+            </div>
+        </div>
+        <h2><a href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D1%86%D0%B8%D1%81_(%D1%80%D0%BE%D1%81%D0%BB%D0%B8%D0%BD%D0%B0)" target="_blank" class="button">Дізнайтеся більше про нарциси</a></h2>
+
+        <h1>Півонії</h1>
+        <div class="container">
+            
+            
+            <div class="column">
+                <img class="im" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIQuZA0WTJgWNnKsS-NOy35LAbI3YHLfwjcw&s">
+                <p><b>Трав'янисті півонії</b></p>
+                <p>Ціна: 50 грн/шт</p>
+                <p>В наявності 10000/шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    
+                    <li>блакитні</li>
+                </ul>
+                
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/pivoniizamoviti.html" target="_blank" class="button">Замовити</a>
+            </div>
+            
+            <div class="column">
+                <img class="im" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP_LQeCy2Atw3DqmsT60Svq-6wvY7xv1cFLg&s">
+                <p><b>Деревоподібна півонія</b></p>
+                <p>Ціна: 50 грн/шт</p>
+                <p>В наявності-10000 шт</p>
+                <p>Кольори в наявнсті:</p>
+                <ul>
+                    
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    
+                    <li>блакитні</li>
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/pivoniizamoviti.html" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://gradinamax.com.ua/uploads/catalog_products/pion-gardeniya_1.jpg">
+                <p><b>Півонія Gardenia</b></p>
+                <p>Ціна: 50 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    
+                    <li>блакитні</li>
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/pivoniizamoviti.html" target="_blank" class="button">Замовити</a>
+            </div>
+            <div class="column">
+                <img class="im" src="https://dutchbulbs.com.ua/wp-content/uploads/2020/07/paeonia-florence-nicholls-e1594650143290.jpg">
+                <p><b>Півонія флоренсе</b></p>
+                <p>Ціна: 50 грн/шт</p>
+                <p>В наявності: 10000 шт</p>
+                <p>Кольори в наявності:</p>
+                <ul>
+                    
+                    <li>рожеві</li>
+                    <li>білі</li>
+                    
+                    <li>блакитні</li>
+                </ul>
+                <a href="http://127.0.0.1:5500/%D0%BC%D0%B0%D1%80%D1%82%D1%96%D0%BD%D1%96/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/pivoniizamoviti.html" target="_blank" class="button">Замовити</a>
+                
+            </div>
+
+        </div>
+        <h2><a href="https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%B2%D0%BE%D0%BD%D1%96%D1%8F_%D0%BB%D1%96%D0%BA%D0%B0%D1%80%D1%81%D1%8C%D0%BA%D0%B0#:~:text=%D0%9F%D1%96%D0%B2%D0%BE%D0%BD%D1%96%D1%8F%20%D0%BB%D1%96%D0%BA%D0%B0%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20%E2%80%94%20%D0%B1%D0%B0%D0%B3%D0%B0%D1%82%D0%BE%D1%80%D1%96%D1%87%D0%BD%D0%B0%20%D1%80%D0%BE%D1%81%D0%BB%D0%B8%D0%BD%D0%B0%2C%20%D1%89%D0%BE,%D0%BF%D1%96%D0%B2%D0%BE%D0%BD%D1%96%D1%97%20%D0%BC%D0%BE%D0%B6%D0%B5%20%D1%82%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%B8%20%D0%B4%D0%BE%D1%81%D0%B8%D1%82%D1%8C%20%D0%B4%D0%BE%D0%B2%D0%B3%D0%BE." target="_blank" class="button">Дізнайтеся більше про півонії</a></h2>
+        
+       
+
+        <footer>
+            <a id="about-us"></a>
+            
+            <h5>Детальніше</h5>
+            <h6>nom: +380(50)5236683</h6>
+            <h6>inst: martina.decor</h6>
+            <h5>Дякуємо що завітали!</h5>
+            
+        </footer>
+
+
+
+    </main> 
+</body> 
